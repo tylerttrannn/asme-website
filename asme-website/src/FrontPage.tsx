@@ -1,5 +1,4 @@
 import asmeimg from '../src/assets/pngver.png'
-import paperimg from '../src/assets/paper.jpg'
 import './index.css' 
 import EventCard from './components/EventCard'
 import BentoGallery from './components/BentoGallery'
