@@ -18,7 +18,7 @@ function ProjectCard({event} : ProjectCardProps) {
         <img 
           src={event.image} 
           alt={event.title} 
-          className="w-full h-auto rounded-xl object-cover opacity-95 group-hover:opacity-100 shadow-sm group-hover:scale-[1.02] transition-all duration-500" 
+          className="w-full h-auto rounded-xl object-cover opacity-95  shadow-sm" 
         />
       </div>
 
