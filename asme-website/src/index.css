@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* 1. Light (Weight 300) */
 @font-face {
   font-family: 'HelveticaNow';
   src: url('./assets/fonts/HelveticaNowDisplay-Light.ttf') format('truetype');
@@ -8,7 +7,6 @@
   font-style: normal;
 }
 
-/* 2. Regular (Weight 400) */
 @font-face {
   font-family: 'HelveticaNow';
   src: url('./assets/fonts/HelveticaNowDisplay-Regular.ttf') format('truetype');
@@ -16,7 +14,6 @@
   font-style: normal;
 }
 
-/* 3. Medium (Weight 500) */
 @font-face {
   font-family: 'HelveticaNow';
   src: url('./assets/fonts/HelveticaNowDisplay-Medium.ttf') format('truetype');
@@ -24,7 +21,6 @@
   font-style: normal;
 }
 
-/* 4. Bold (Weight 700) */
 @font-face {
   font-family: 'HelveticaNow';
   src: url('./assets/fonts/HelveticaNowDisplay-Bold.ttf') format('truetype');
@@ -32,15 +28,12 @@
   font-style: normal;
 }
 
-/* ... existing keyframes ... */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Tailwind v4 Theme Configuration */
 @theme {
-  /* Define the custom font variable */
   --font-helvetica: "HelveticaNow", "sans-serif";
 }
 
