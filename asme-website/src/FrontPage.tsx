@@ -125,9 +125,11 @@ function FrontPage() {
               <div className = "flex flex-col space-y-12">
                   <h2 className="font-helevtica text-sm font-bold uppercase tracking-widest mb-2">Who We Are</h2>
                   <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">About ASME</h1>
-                  <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
               </div>
             </Reveal>
+
+            <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
+
 
             <Reveal>
               <p className="font-helevtica font-light text-lg md:text-xl leading-relaxed pt-4 pb-14">
@@ -144,7 +146,7 @@ function FrontPage() {
 
         {/*events*/}
         <div className="py-24 bg-[#f1f0ea]">
-          <div className="container mx-auto px-6 lg:px-24 flex flex-col gap-12">
+          <div className="container mx-auto px-6 lg:px-24 flex flex-col">
             
             <Reveal>
               <div className = "flex flex-col w-full">
@@ -152,9 +154,14 @@ function FrontPage() {
                     <h2 className="font-helevtica text-sm font-bold uppercase tracking-widest mb-2">Get Involved </h2>
                     <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">Events</h1>
                   </div>
-                  <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 -mx-6 lg:-mx-24"></div>
-              </div>
-              
+              </div>              
+            </Reveal>
+            <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
+
+            <Reveal>
+              <p className="font-helevtica font-light text-lg md:text-xl leading-relaxed pt-4 pb-14">
+                  Explore the hands-on engineering challenges our teams are tackling this year.
+              </p>
             </Reveal>
 
             <div className="flex flex-col gap-12">
@@ -179,9 +186,10 @@ function FrontPage() {
               <div className = "flex flex-col space-y-12">
                   <h2 className="font-helevtica text-sm font-bold uppercase tracking-widest mb-2">Our Work</h2>
                   <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">Featued Projects</h1>
-                  <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
               </div>
             </Reveal>
+            <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
+
 
             <Reveal>
               <p className="font-helevtica font-light text-lg md:text-xl leading-relaxed pt-4 pb-14">

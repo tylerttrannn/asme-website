@@ -18,7 +18,7 @@ function ProjectCard({event} : ProjectCardProps) {
         <img 
           src={event.image} 
           alt={event.title} 
-          className="w-full h-auto rounded-xl object-cover opacity-95  shadow-sm" 
+          className="w-full h-auto rounded-xl object-cover opacity-95 " 
         />
       </div>
 
