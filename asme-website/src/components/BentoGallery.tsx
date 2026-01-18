@@ -8,12 +8,8 @@ function BentoGallery() {
           <img 
             src="https://picsum.photos/600/600?random=1" 
             alt="Main Feature"
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" 
+            className="w-full h-full object-cover rounded-lg" 
           />
-          <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors" />
-          <div className="absolute bottom-4 left-4 text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-             Main Feature
-          </div>
         </div>
 
         {/* img2*/}

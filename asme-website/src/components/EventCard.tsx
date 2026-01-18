@@ -13,7 +13,7 @@ interface EventCardProps {
 
 function EventCard({event, isReversed} : EventCardProps){
   return (
-    <div className={`font-helvetica group flex flex-col md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''} bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300`}>
+    <div className={`font-helvetica group flex flex-col md:flex-row ${isReversed ? 'md:flex-row-reverse' : ''} bg-white rounded-2xl overflow-hidden border border-gray-100  hover:shadow-xl transition-all duration-300`}>
       
       <div className="flex-1 p-8 md:p-12 flex flex-col justify-center">        
         <div className="flex items-center gap-3 mb-4">

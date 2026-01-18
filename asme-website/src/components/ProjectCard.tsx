@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 function ProjectCard({event} : ProjectCardProps) {
   return (
-    <div className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300">
+    <div className="font-helvetica group flex flex-col bg-white rounded-2xl overflow-hidden ">
       
       <div className="p-6">
         <img 
