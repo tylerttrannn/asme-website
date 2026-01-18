@@ -90,18 +90,16 @@ function FrontPage() {
       <div className="relative z-10">
         <MobileNavbar/>
 
-        <div className="relative h-screen w-full overflow-hidden flex flex-col items-center">
+        <div className="relative h-[60vh] md:h-screen w-full overflow-hidden flex flex-col items-center">
           <div className="absolute top-14 z-50"> 
             <Navbar />
           </div>          
           
-          <div className="h-full w-full">
-            <img 
-                src={asmeimg} 
-                className="h-full w-full object-cover"
-                alt="ASME banner" 
-            />
-          </div>
+          <img 
+              src={asmeimg} 
+              className="h-full w-full object-cover object-center"
+              alt="ASME banner" 
+          />
 
           <div className="absolute bottom-16 z-20 animate-bounce pointer-events-none bg-white rounded-full">
             <svg 
