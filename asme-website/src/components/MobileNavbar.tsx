@@ -1,35 +1,73 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MenuIcon from "../assets/burger-bar.png"; 
+import Gears from "../../public/gears.png"
 
-function MobileNavbar(){
-
+function MobileNavbar() {
     const [isOpen, setIsOpen] = useState(false);
 
-    return(
-        <div className="md:hidden w-full px-6 py-4 flex justify-between items-center bg-white border-b relative">
-        <span className="font-bold">Logo</span>
-        
-        <button onClick={() => setIsOpen(!isOpen)} className="z-50">
-            {isOpen ? (
-            <span className="text-2xl font-bold">✕</span> 
-            ) : (
-            <img src={MenuIcon} alt="menu" className="w-6 h-6" /> 
-            )}
-        </button>
+    useEffect(() => {
+    if (isOpen) {
+        document.body.style.overflow = "hidden";
+        document.documentElement.style.overflow = "hidden";
+        document.body.style.position = "fixed";
+        document.body.style.width = "100%";
+    } else {
+        document.body.style.overflow = "";
+        document.documentElement.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
+    }
+    }, [isOpen]);
 
-        {isOpen && (
-            <div className="absolute top-full left-0 w-full bg-white shadow-xl p-6 z-40 border-b">
-                <ul className="flex flex-col gap-6 text-lg">
-                <li className="cursor-pointer">About</li>
-                <li className="cursor-pointer">Events</li>
-                <li className="cursor-pointer">Yearbook</li>
-                <li className="cursor-pointer">Store</li>
+
+    return (
+        <nav className="md:hidden w-full fixed top-0 left-0 z-50">
+            <div className="px-6 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md relative z-50">
+                <img src={Gears} className="w-9 h-8" alt="Logo" />
+                
+                <button 
+                    onClick={() => setIsOpen(!isOpen)} 
+                    className="z-50 relative focus:outline-none"
+                >
+                    <div className="w-6 h-6 flex items-center justify-center">
+                        <div className={`transform transition-all duration-300 ${isOpen ? "rotate-90 opacity-100" : "rotate-0 opacity-100"}`}>
+                             {isOpen ? (
+                                <span className="text-xl font-light text-gray-900">✕</span>
+                            ) : (
+                                <img src={MenuIcon} alt="menu" className="w-6 h-6" />
+                            )}
+                        </div>
+                    </div>
+                </button>
+            </div>
+
+
+            <div 
+                className={`
+                    fixed inset-0 w-full h-screen bg-white z-40
+                    flex flex-col pt-24 px-8
+                    overflow-hidden touch-none
+                    transition-all duration-700 ease-[cubic-bezier(0.4,0,0.2,1)]
+                    ${isOpen ? "opacity-100 translate-y-0 visible" : "opacity-0 -translate-y-4 invisible"}
+                `}
+            >
+                <ul className="font-helevtica font-light flex flex-col gap-6 text-2xl ">
+                    <li className={`transform transition-all duration-500 delay-100 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                        <a href="test" className="hover:text-gray-500 transition-colors block border-gray-100 pb-4">About</a>
+                    </li>
+                    <li className={`transform transition-all duration-500 delay-150 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                        <a href="#" className="hover:text-gray-500 transition-colors block border-gray-100 pb-4">Events</a>
+                    </li>
+                    <li className={`transform transition-all duration-500 delay-200 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                        <a href="#" className="hover:text-gray-500 transition-colors block border-gray-100 pb-4">Yearbook</a>
+                    </li>
+                    <li className={`transform transition-all duration-500 delay-300 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
+                        <a href="#" className="hover:text-gray-500 transition-colors block border-gray-100 pb-4">Store</a>
+                    </li>
                 </ul>
             </div>
-        )}
-        </div>
-    )
-
+        </nav>
+    );
 }
 
 export default MobileNavbar;

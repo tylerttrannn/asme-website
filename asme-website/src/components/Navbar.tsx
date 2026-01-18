@@ -2,11 +2,9 @@ import { Reveal } from "./Reveal";
 import { useState } from "react";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <>
-      {/* --- DESKTOP NAVBAR --- */}
       <div className="hidden md:block">
         <Reveal>
           <nav className="font-helvetica font-medium bg-white/90 backdrop-blur-sm px-12 py-3 rounded-full shadow-lg border border-white/20">

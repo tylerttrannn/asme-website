@@ -91,13 +91,12 @@ function FrontPage() {
       </div>
 
       <div className="relative z-10">
-        
+        <MobileNavbar/>
+
         <div className="relative h-screen w-full overflow-hidden flex flex-col items-center">
           <div className="absolute top-14 z-50"> 
             <Navbar />
-          </div>
-
-          <MobileNavbar/>
+          </div>          
           
           <div className="h-full w-full">
             <img 
@@ -151,16 +150,18 @@ function FrontPage() {
           <div className="container mx-auto px-6 lg:px-24 flex flex-col gap-12">
             
             <Reveal>
-              <div className = "flex flex-col space-y-12">
-                  <h2 className="font-helevtica text-sm font-bold uppercase tracking-widest mb-2">Get Involved </h2>
-                  <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">Events</h1>
-                  <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
+              <div className = "flex flex-col w-full">
+                  <div className = "flex flex-col space-y-12">
+                    <h2 className="font-helevtica text-sm font-bold uppercase tracking-widest mb-2">Get Involved </h2>
+                    <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">Events</h1>
+                  </div>
+                  <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 -mx-6 lg:-mx-24"></div>
               </div>
+              
             </Reveal>
 
             <div className="flex flex-col gap-12">
               {eventsData.map((event, index) => (
-                // Moving Reveal inside the map allows each card to animate individually
                 <Reveal key={index} width="100%">
                   <EventCard 
                     event={event} 
@@ -193,7 +194,6 @@ function FrontPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
               {projectsData.map((event, index) => (
-                // Reveal wraps each grid item
                 <Reveal key={index} width="100%">
                   <ProjectCard 
                     event={event} 
