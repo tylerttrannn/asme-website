@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import { Reveal } from './components/Reveal'
 import { useEffect } from 'react'
 import Lenis from 'lenis'
+import MobileNavbar from './components/MobileNavbar'
 
 interface EventItem {
   title: string;
@@ -95,11 +96,13 @@ function FrontPage() {
           <div className="absolute top-14 z-50"> 
             <Navbar />
           </div>
+
+          <MobileNavbar/>
           
           <div className="h-full w-full">
             <img 
                 src={asmeimg} 
-                className="h-full w-full object-cover rounded-2xl shadow-2xl"
+                className="h-full w-full object-cover"
                 alt="ASME banner" 
             />
           </div>
