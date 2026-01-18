@@ -21,7 +21,7 @@ function MobileNavbar() {
 
 
     return (
-        <nav className="md:hidden w-full fixed top-0 left-0 z-50">
+        <nav className="md:hidden w-full">
             <div className="px-6 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md relative z-50">
                 <img src={Gears} className="w-9 h-8" alt="Logo" />
                 

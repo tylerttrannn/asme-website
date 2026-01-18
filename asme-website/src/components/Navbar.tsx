@@ -11,7 +11,7 @@ function Navbar() {
               <li className="cursor-pointer hover:text-blue-600 transition">About</li>
               <li className="cursor-pointer hover:text-blue-600 transition">Events</li>
               <li className="cursor-pointer hover:text-blue-600 transition">Yearbook</li>
-              <li className="cursor-pointer hover:text-blue-600 transition">Store</li>
+              <li className="cursor-pointer hover:text-blue-600 transition">Links</li>
             </ul>
           </nav>
         </Reveal>

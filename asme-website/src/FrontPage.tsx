@@ -90,7 +90,7 @@ function FrontPage() {
       <div className="relative z-10">
         <MobileNavbar/>
 
-        <div className="relative h-[60vh] md:h-screen w-full overflow-hidden flex flex-col items-center">
+        <div className="relative h-[80vh] md:h-screen w-full overflow-hidden flex flex-col items-center">
           <div className="absolute top-14 z-50"> 
             <Navbar />
           </div>          
