@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import MenuIcon from "../assets/burger-bar.png"; 
 import Gears from "../../public/gears.png"
+import { Link } from "react-router-dom";
 
 function MobileNavbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -53,16 +54,16 @@ function MobileNavbar() {
             >
                 <ul className="font-helevtica font-light flex flex-col gap-6 text-2xl ">
                     <li className={`transform transition-all duration-500 delay-100 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-                        <a href="test" className="hover:text-gray-500 transition-colors block border-gray-100 pb-4">About</a>
+                        <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Home</Link>
                     </li>
                     <li className={`transform transition-all duration-500 delay-150 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-                        <a href="#" className="hover:text-gray-500 transition-colors block border-gray-100 pb-4">Events</a>
+                        <Link to="/about" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">About</Link>
                     </li>
                     <li className={`transform transition-all duration-500 delay-200 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-                        <a href="#" className="hover:text-gray-500 transition-colors block border-gray-100 pb-4">Yearbook</a>
+                        <Link to="/events" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Events</Link>
                     </li>
                     <li className={`transform transition-all duration-500 delay-300 ${isOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}`}>
-                        <a href="#" className="hover:text-gray-500 transition-colors block border-gray-100 pb-4">Store</a>
+                        <Link to="/yearbook" onClick={() => setIsOpen(false)} className="hover:text-gray-500 block pb-4">Yearbook</Link>
                     </li>
                 </ul>
             </div>
