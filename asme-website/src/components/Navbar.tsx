@@ -1,5 +1,4 @@
 import { Reveal } from "./Reveal";
-import { useState } from "react";
 
 function Navbar() {
 

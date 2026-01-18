@@ -87,9 +87,6 @@ function FrontPage() {
   return (
     <div className="relative min-h-screen w-full bg-gray-50">
       
-      <div className="fixed inset-0 z-0 ">
-      </div>
-
       <div className="relative z-10">
         <MobileNavbar/>
 
