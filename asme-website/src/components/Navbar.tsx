@@ -6,7 +6,7 @@ function Navbar() {
     <>
       <div className="hidden md:block">
         <Reveal>
-          <nav className="font-helvetica font-medium bg-white/90 backdrop-blur-sm px-12 py-3 rounded-full shadow-lg border border-white/20">
+          <nav className="font-helvetica font-medium bg-white/90 backdrop-blur-sm px-12 py-3 rounded-full  border border-white/20">
             <ul className="flex items-center gap-12 text-sm text-gray-800">
               <li>
                 <Link to="/" className="cursor-pointer hover:text-blue-600 transition">
