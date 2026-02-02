@@ -9,7 +9,7 @@ function Links(){
             {/* Added pt-32 so the content starts below the absolute Navbar */}
             <div className="pt-32 bg-[#f1f0ea] min-h-screen">
                 
-                {/* --- RSVP SECTION --- */}
+                {/* RSPV Section*/}
                 <Section className="bg-[#f1f0ea]">
                     <Reveal>
                         <div className="flex flex-col space-y-2">
@@ -37,7 +37,7 @@ function Links(){
                     </div>
                 </Section>
 
-                {/* --- GENERAL FORMS SECTION --- */}
+                {/* General Forms Section*/}
                 <Section className="bg-[#f1f0ea]">
                     <Reveal>
                         <div className="flex flex-col space-y-2">
@@ -72,7 +72,7 @@ function Links(){
                     </div>
                 </Section>
 
-                {/* --- COMMUNITY SECTION --- */}
+                {/* Community Section */}
                 <Section className="bg-[#f1f0ea]">
                     <Reveal>
                         <div className="flex flex-col space-y-2">

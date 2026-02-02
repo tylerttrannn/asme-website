@@ -8,6 +8,12 @@ interface LayoutProps {
   children: ReactNode;
 }
 
+/*
+We will use this component as a base for all of our views, 
+it has both of the navbars for desktop and mobile + 
+a footer already in
+*/
+
 const Layout = ({ children }: LayoutProps) => {
   useEffect(() => {
     const lenis = new Lenis({
@@ -29,11 +35,10 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="relative min-h-screen w-full bg-gray-50">
-      
       <MobileNavbar />
 
       <div className="relative z-10 flex flex-col min-h-screen">
-
+        {/* desktop navbar */}
         <div className="absolute top-14 z-50 w-full flex justify-center"> 
           <Navbar />
         </div>          
@@ -43,6 +48,7 @@ const Layout = ({ children }: LayoutProps) => {
           {children}
         </main>
 
+        {/* footer component*/}
         <footer className="py-6 bg-white">
           <div className="container mx-auto px-6 lg:px-24 flex flex-col gap-2">
               <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
