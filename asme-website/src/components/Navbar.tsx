@@ -41,8 +41,8 @@ function Navbar() {
                     </li>
                     <li>
                       <NavigationMenuLink asChild>
-                        <Link to="/about/team" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
-                          The Team
+                        <Link to="/board" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
+                          Board
                         </Link>
                       </NavigationMenuLink>
                     </li>

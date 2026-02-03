@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import FrontPage from './FrontPage'; 
 import Links from './pages/Links';
 import asmegif from '../src/assets/asmegif.gif'
+import Board from './pages/Board';
 
 
 const DefaultPage = () => (
@@ -22,6 +23,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<FrontPage />} />
         <Route path="/links" element={<Links />} />
+        <Route path="/board" element= {<Board/>} />
         <Route path="*" element={<DefaultPage />} />
       </Routes>
     </BrowserRouter>
