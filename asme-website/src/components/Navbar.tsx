@@ -1,43 +1,74 @@
 import { Link } from 'react-router-dom';
 import { Reveal } from "./Reveal";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "./ui/navigation-menu";
 
 function Navbar() {
   return (
-    <>
-      <div className="hidden md:block">
-        <Reveal>
-          <nav className="font-helvetica font-medium bg-white/90 backdrop-blur-sm px-12 py-3 rounded-full  border border-white/20">
-            <ul className="flex items-center gap-12 text-sm text-gray-800">
-              <li>
-                <Link to="/" className="cursor-pointer hover:text-blue-600 transition">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" className="cursor-pointer hover:text-blue-600 transition">
+    <div className="hidden md:block">
+      <Reveal>
+        <div className="font-helevtica flex justify-center p-4">
+          <NavigationMenu className="bg-white/90 backdrop-blur-sm px-6 py-1 rounded-full border border-gray-100 shadow-sm">
+            <NavigationMenuList className="gap-1">
+              
+              {/* Home Link */}
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gray-100 focus:bg-gray-100 rounded-full transition-colors`}>
+                  <Link to="/" className="text-sm font-normal text-gray-800">Home</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              {/* About Link w/ dropdown */}
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-gray-100 data-[state=open]:bg-gray-100 rounded-full font-normal text-sm text-gray-800 transition-colors">
                   About
-                </Link>
-              </li>
-              <li>
-                <Link to="/events" className="cursor-pointer hover:text-blue-600 transition">
-                  Events
-                </Link>
-              </li>
-              <li>
-                <Link to="/yearbook" className="cursor-pointer hover:text-blue-600 transition">
-                  Yearbook
-                </Link>
-              </li>
-              <li>
-                <Link to="/links" className="cursor-pointer hover:text-blue-600 transition">
-                  Links
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </Reveal>
-      </div>
-    </>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[180px] gap-1 p-2 bg-white rounded-xl ">
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link to="/about" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
+                          Our Mission
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                    <li>
+                      <NavigationMenuLink asChild>
+                        <Link to="/about/team" className="block p-2 text-sm hover:bg-gray-100 rounded-md transition-colors text-gray-700">
+                          The Team
+                        </Link>
+                      </NavigationMenuLink>
+                    </li>
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              {/* Dynamic Links (Events, Yearbook, Links) */}
+              {["Events", "Yearbook", "Links"].map((label) => (
+                <NavigationMenuItem key={label}>
+                  <NavigationMenuLink 
+                    asChild 
+                    className={`${navigationMenuTriggerStyle()} bg-transparent hover:bg-gray-100 focus:bg-gray-100 rounded-full transition-colors`}
+                  >
+                    <Link to={`/${label.toLowerCase()}`} className="text-sm font-normal text-gray-800">
+                      {label}
+                    </Link>
+                  </NavigationMenuLink>
+                </NavigationMenuItem>
+              ))}
+
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+      </Reveal>
+    </div>
   );
 }
 
