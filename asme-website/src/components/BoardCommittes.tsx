@@ -84,6 +84,9 @@ const boardCommitte: BoardCommittee[] = [
     ],
   },
 ];
+
+
+
 function BoardComittes() {
   const [activeIndex, setActiveIndex] = useState(0);
   const currentCommittee = boardCommitte[activeIndex];

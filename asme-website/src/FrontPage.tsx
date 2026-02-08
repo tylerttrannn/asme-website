@@ -1,4 +1,4 @@
-import asmeimg from '../src/assets/pngver.png';
+import asmeimg from '../src/assets/asmecover.png';
 import './index.css';
 import EventCard from './components/EventCard';
 import BentoGallery from './components/BentoGallery';
@@ -90,7 +90,7 @@ function FrontPage() {
         </Reveal>
         <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700"></div>
         <Reveal>
-          <p className="font-helevtica font-light text-lg md:text-xl leading-relaxed pt-4 pb-14">
+          <p className="font-helevtica font-normal text-lg md:text-2xl leading-relaxed pt-4 pb-14">
             ASME is a community of students and engineers dedicated to learning, collaboration, and hands-on innovation. We create opportunities for members to grow through technical projects, professional development, workshops, and networking events.
           </p>
         </Reveal>
