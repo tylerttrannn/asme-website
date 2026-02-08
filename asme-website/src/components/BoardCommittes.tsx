@@ -1,0 +1,112 @@
+import { useState } from "react";
+
+interface Member {
+  name: string;
+  role: string;
+  image: string;
+}
+
+interface BoardCommittee {
+  title: string;
+  members: Member[];
+}
+
+const boardCommitte: BoardCommittee[] = [
+  {
+    title: "Executive",
+    members: [
+      { name: "Brian Van", role: "President", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E" },
+      { name: "Vanessa Shimizu", role: "Vice President", image: "https://media.licdn.com/dms/image/v2/D5603AQGnGpClbRQvlQ/profile-displayphoto-scale_200_200/B56ZtnE5nBLAAY-/0/1766960897346?e=1771459200&v=beta&t=YZFMTPUpHZdF9gr0F1NqpOZHddJ_gWSWsNsL5yquSrU" },
+      { name: "Tristan Dela Cruz", role: "Secretary", image: "https://media.licdn.com/dms/image/v2/D5603AQH5TiG3S3LeZg/profile-displayphoto-scale_200_200/B56ZrSfx3yKwAY-/0/1764468137958?e=1771459200&v=beta&t=Ebqep1mXWcRc_0B1mcrT4WC2iB4gPLTvp1L8lT1WsKA" },
+
+    ],
+  },
+  {
+    title: "Externals",
+    members: [
+      { name: "Sophia Sweeney", role: "External Affairs Director", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E" },
+      { name: "Jack Ishibashi", role: "Youth Engagement Chair", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E" },
+      { name: "Nicholas DiDonato", role: "Youth Engagement Chair", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E" },
+      { name: "Minh Nguyen", role: "Committee Member", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E" },
+    ],
+  },
+  {
+    title: "Internal",
+    members: [
+      { name: "Abby Baldwin", role: "Internal Affairs Director", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E" },
+      { name: "Meera Sambhwani", role: "Internal Affairs Director", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E" },
+      { name: "Connor Craft", role: "General Events Chair", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E" },
+      { name: "Sean Chun", role: "Campus Events Chair", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E" },
+      { name: "Storme Higgins", role: "Committee Member", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E" },
+      { name: "Victoria Liu", role: "Commitee Member", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1720490616032?e=1771459200&v=beta&t=X7KOQoFc1wtI00Imckzmq2NgBHfaXhz6MSYmpBbYm6E" },
+
+    ],
+  },
+  {
+    title: "Communications",
+    members: [],
+  },
+  {
+    title: "Finance",
+    members: [],
+  },
+  {
+    title: "Mech-in Training",
+    members: [],
+  },
+  {
+    title: "Peterworks",
+    members: [],
+  },
+];
+function BoardComittes() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const currentCommittee = boardCommitte[activeIndex];
+
+  return (
+    <div>
+      {/* Scrollable Row */}
+      <div className="flex flex-nowrap gap-4 overflow-x-auto no-scrollbar pb-4 ">
+        {boardCommitte.map((committee, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            className={`
+              shrink-0 px-6 py-2 rounded-full border transition-all duration-300 font-medium text-sm
+              ${
+                activeIndex === index
+                  ? "bg-gray-800 text-white border-gray-900 shadow-md"
+                  : "bg-white text-gray-600 border-gray-200 hover:bg-gray-100"
+              }
+            `}
+          >
+            {committee.title}
+          </button>
+        ))}
+      </div>
+
+      {/* content */}
+      <div className="mt-10 ">
+        <div className="flex flex-wrap justify-center gap-10 p-1">
+          {
+            currentCommittee.members.map((member, idx) => (
+              <div key={idx} className="flex flex-col">
+                <div className="w-60 h-60 overflow-hidden bg-gray-100 mb-4 rounded-md">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover" 
+                  />
+                </div>
+                <h3 className="font-medium text-lg">{member.name}</h3>
+                <p className="text-gray-500">{member.role}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default BoardComittes;

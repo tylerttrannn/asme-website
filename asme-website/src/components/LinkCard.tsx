@@ -2,9 +2,9 @@ import React from 'react';
 
 interface LinkCardProps {
   title: string;
-  description?: string; // Optional
+  description?: string;
   href: string;
-  tag?: string; // Optional label like "Urgent" or "New"
+  tag?: string; 
 }
 
 const LinkCard: React.FC<LinkCardProps> = ({ title, description, href, tag }) => {
