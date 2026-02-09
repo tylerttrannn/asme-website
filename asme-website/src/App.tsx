@@ -25,6 +25,7 @@ export default function App() {
         <Route path="/" element={<FrontPage />} />
         <Route path="/links" element={<Links />} />
         <Route path="/board" element= {<Board/>} />
+        <Route path="/events" element = {<Events/>} />
         <Route path="*" element={<DefaultPage />} />
       </Routes>
     </BrowserRouter>
