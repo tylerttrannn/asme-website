@@ -3,6 +3,7 @@ import FrontPage from './FrontPage';
 import Links from './pages/Links';
 import asmegif from '../src/assets/asmegif.gif'
 import Board from './pages/Board';
+import Events from './pages/Events';
 
 
 const DefaultPage = () => (
