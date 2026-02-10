@@ -17,3 +17,12 @@ TODO Website Checklist
 - [ ] make asme yearbook page
 - [ ] make events section page ( need to collaborate later on what we want specifically) 
 - [ ] add a dropdown menu button for the About button on the navbar
+
+
+
+EVENTS TODO
+-create structure
+-create instagram post section
+    -structure it properly
+    -embed it properly
+    
