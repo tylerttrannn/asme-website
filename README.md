@@ -1,5 +1,6 @@
 to run locally on the terminal enter the following commands 
 
+cd asme-website
 ```
 npm install 
 ```
