@@ -88,7 +88,7 @@ const boardCommitte: BoardCommittee[] = [
 
 
 
-function BoardComittes() {
+function BoardCommittees() {
   const [activeIndex, setActiveIndex] = useState(0);
   const currentCommittee = boardCommitte[activeIndex];
 
@@ -155,4 +155,4 @@ function BoardComittes() {
     </div>
   );
 }
-export default BoardComittes;
+export default BoardCommittees;
