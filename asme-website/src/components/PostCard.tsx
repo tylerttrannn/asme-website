@@ -1,3 +1,4 @@
+/*
 interface instaPosts { //the interface for the Instagram Updates
     title: string;
     date: string; 
@@ -5,4 +6,4 @@ interface instaPosts { //the interface for the Instagram Updates
     caption: string; //
     image: string; //display image or if its not a video
 };
-
+*/

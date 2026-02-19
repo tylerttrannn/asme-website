@@ -3,7 +3,6 @@ import Layout from "../components/Layout"
 //import asmeimg from '../assets/pngver.png';
 import { Reveal } from '../components/Reveal';
 //import { InstagramEmbed } from 'react-social-media-embed';
-import asmeGif from '../assets/asmegif.gif'
 
 const postData = [
   { id: 1, title: "RNN", link: "https://www.instagram.com/p/DUpCESOCtjo/", image: "/InstagramPosts/TakingFlight.jpg"},
