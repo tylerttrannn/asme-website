@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import transparentLinkedin from "../assets/linkedinTransparent.svg"
 import boardCommitte from "@/model/BoardMembers";
 import boardGroupPhotos from "@/model/BoardGroupPhotos"
 
@@ -52,13 +52,20 @@ function BoardCommittees() {
         <div className="w-full flex justify-center">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-12">
             {currentCommittee.members.map((member, idx) => (
-              <div key={idx} className="flex flex-col items-center sm:items-start w-60"> 
-                <div className="w-60 h-60 overflow-hidden bg-gray-100 mb-4 rounded-md">
+              <div key={idx} className="flex flex-col items-center sm:items-start w-60 "> 
+                <div className="group relative w-60 h-60 overflow-hidden rounded-md mb-4">
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover" 
                   />
+
+                  {/* linkedin overlay*/}
+                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                          <img src={transparentLinkedin} alt="LinkedIn" className="w-12 h-12 object-contain opacity-80" />
+                    </div>
+                  </a>
                 </div>
                 <div className="w-full px-1">
                   <h3 className="font-medium text-lg text-center sm:text-left leading-tight">
