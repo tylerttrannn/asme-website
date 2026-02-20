@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import board from '../../src/assets/board.jpg';
 import Section from "@/components/Section";
-import BoardComittes from "@/components/BoardCommittees";
+import BoardCommittees from "@/components/BoardCommittees";
 
 function Board() { 
     return (
@@ -23,9 +23,7 @@ function Board() {
             </Section>
 
             <Section >
-                <BoardComittes/>
-
-
+                <BoardCommittees/>
             </Section>
       
         </Layout>

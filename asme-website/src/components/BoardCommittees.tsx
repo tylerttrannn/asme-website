@@ -1,15 +1,12 @@
 import { useState } from "react";
-import exec from "../assets/board-group-photos/exec.png"
+
 import boardCommitte from "@/model/BoardMembers";
-
-
-
-
-
+import boardGroupPhotos from "@/model/BoardGroupPhotos"
 
 function BoardCommittees() {
   const [activeIndex, setActiveIndex] = useState(0);
   const currentCommittee = boardCommitte[activeIndex];
+  const currentBoardPhoto = boardGroupPhotos[activeIndex]; 
 
   return (
     <div className="flex flex-col items-center w-full">
@@ -17,11 +14,17 @@ function BoardCommittees() {
         Get to know our team
       </h1>
 
-      <img 
-        src={exec} 
-        className="w-4/5 h-auto object-cover rounded-lg" 
-        alt="Exec Team"
-      />
+      {currentBoardPhoto.photoURL ? (
+        <img 
+          src={currentBoardPhoto.photoURL} 
+          className="w-4/5 h-auto object-cover rounded-lg" 
+          alt="Exec Team"
+        />
+      ) : (
+        <div className="w-4/5 h-48 flex items-center justify-center  rounded-lg text-gray-500 italic">
+          No photo available
+        </div>
+      )}
 
       <div className="flex flex-col mt-10 w-full max-w-8xl px-4 items-center"> 
         <div className="w-full flex justify-center mb-12">
