@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import MenuIcon from "../assets/burger-bar.png"; 
-import Gears from "../../public/gears.png"
+import Gears from "/gears.png"
 import { Link } from "react-router-dom";
 
 function MobileNavbar() {
