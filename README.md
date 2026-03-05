@@ -21,9 +21,3 @@ TODO Website Checklist
 
 
 
-EVENTS TODO
--create structure
--create instagram post section
-    -structure it properly
-    -embed it properly
-    

@@ -23,7 +23,7 @@ function Links(){
                         <Reveal width="100%">
                             <LinkCard 
                                 title="Research Network Night" 
-                                href="https://google.com" 
+                                href="/Peterworks" //change back to google in the future
                                 description="herro"
                             />
                         </Reveal>
