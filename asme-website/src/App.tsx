@@ -2,9 +2,6 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import FrontPage from './FrontPage'; 
 import Links from './pages/Links';
 import asmegif from '../src/assets/asmegif.gif'
-import Board from './pages/Board';
-import Events from './pages/Events';
-import Yearbook from './pages/Yearbook';
 
 
 const DefaultPage = () => (
@@ -25,9 +22,10 @@ export default function App() {
       <Routes>
         <Route path="/" element={<FrontPage />} />
         <Route path="/links" element={<Links />} />
-        <Route path="/board" element= {<Board/>} />
-        <Route path="/events" element = {<Events/>} />
-        <Route path="/yearbook" element = {<Yearbook/>}/>
+        <Route path="/board" element={<DefaultPage />} />
+        <Route path="/events" element={<DefaultPage />} />
+        <Route path="/yearbook" element={<DefaultPage />} />
+        <Route path="/coming-soon" element={<DefaultPage />} />
         <Route path="*" element={<DefaultPage />} />
       </Routes>
     </BrowserRouter>
