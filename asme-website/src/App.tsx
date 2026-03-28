@@ -5,8 +5,7 @@ import Links from './pages/Links';
 import Board from './pages/Board';
 import Events from './pages/Events';
 import Yearbook from './pages/Yearbook';
-import asmegif from '../src/assets/asmegif.gif'
-import Peterworks from './pages/Peterworks'
+import asmegif from '@/assets/site/loading.gif';
 
 const PREVIEW_MODE_STORAGE_KEY = 'asme-preview-mode';
 const isDev = import.meta.env.DEV;

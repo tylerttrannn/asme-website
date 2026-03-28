@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import transparentLinkedin from "@/assets/social/linkedin.svg";
 import type { BoardCommitteeWithPhoto } from "@/model/BoardDirectory";
 
@@ -9,10 +9,6 @@ interface BoardCommitteesProps {
 
 function BoardCommittees({ committees, heading = "Get to know our team" }: BoardCommitteesProps) {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  useEffect(() => {
-    setActiveIndex(0);
-  }, [committees]);
 
   const safeActiveIndex = committees.length === 0 ? -1 : Math.min(activeIndex, committees.length - 1);
   const currentCommittee = safeActiveIndex >= 0 ? committees[safeActiveIndex] : null;
