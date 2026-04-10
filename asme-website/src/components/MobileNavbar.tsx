@@ -24,7 +24,9 @@ function MobileNavbar() {
     return (
         <nav className="md:hidden w-full">
             <div className="px-6 py-4 flex justify-between items-center bg-white/90 backdrop-blur-md relative z-50">
-                <img src={Gears} className="w-9 h-8" alt="Logo" />
+                <Link to="/" onClick={() => setIsOpen(false)} className="inline-flex items-center">
+                    <img src={Gears} className="w-9 h-8" alt="Logo" />
+                </Link>
                 
                 <button 
                     onClick={() => setIsOpen(!isOpen)} 
