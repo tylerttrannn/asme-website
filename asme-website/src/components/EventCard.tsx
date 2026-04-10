@@ -38,10 +38,6 @@ function EventCard({event, isReversed} : EventCardProps){
           {event.description}
         </p>
 
-        <span className="self-start text-black font-semibold hover:text-blue-600 transition-colors flex items-center gap-2">
-          Learn More
-          <span className="group-hover:translate-x-1 transition-transform duration-200">→</span>
-        </span>
       </div>
 
       <div className="md:w-1/2 p-6 md:p-10 flex flex-col justify-center bg-white">

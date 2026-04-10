@@ -22,27 +22,51 @@ function Links(){
                     <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
                     
                     <div className="flex flex-col space-y-5">
-                        <Reveal width="100%">
-                            <LinkCard 
-                                title="ASME FLAM Tour Interest Form" 
-                                href="https://forms.gle/bi3zssBsKxJqDqiV6" 
-                                description="Flying Leatherneck Aviation Museum (FLAM) has the largest and most complete collection of historical aircraft flown by U.S. Marine pilots in the world. A team of UCI students currently work together to restore the 1917 Curtiss JN-4D, or Jenny plane that trained U.S. Air Service throughout World War I. We will be touring a hangar for the new museum that will be built next year in Irvine. "
-                            />
-                        </Reveal>
+
 
                         <Reveal width="100%">
                             <LinkCard 
-                                title="Formula Drift S26 Student RSVP" 
-                                href="https://forms.gle/RTMP6P2cmrsJhVADA" 
-                                description={`Hi there Anteaters! Rome Charpinter along with his competition car, Papadakis Racing along with their competition car, Odi Bakchis (driver), and Kevin Wells (competition director), will discuss their path into racing / Formula Drift and showcase their cars! Also there will be time at the end for FREE food and open networking with the FD reps!`}
+                                title="ASME At UCI Senior Design Networking Night RSVP" 
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSeDUsNFNE5d1Ag2XP47nPZSnn4R-v7RZ_-25rZQGoOLGxIaDA/viewform?usp=publish-editor" 
+                                description="Hello Anteaters! ASME At UCI is excited to invite you all to our annual Senior Design Networking Night! We ask that you fill this form out by Saturday, 4/21/26 by 11:59 PM. Please review the following details carefully before completing the form:"
                             />
                         </Reveal>
 
+
                         <Reveal width="100%">
                             <LinkCard 
-                                title="ASME Bonfire RSVP Form" 
-                                href="https://forms.gle/Jttruh5zavgHhbWy7" 
-                                description="Join us for a fun evening at the beach! We will have volleyball, pizza, and s'mores :D"
+                                title="ASME x HyperXite Lab Tours" 
+                                href="https://forms.gle/AuVSkGxR1ddCyZnG9" 
+                                description="Thank you for your interest in applying for HyperXite for the upcoming academic school year! Please fill out this form to RSVP for a lab tour.
+
+Once we have received responses from those interested, we will reach back out to you via email to let you know what timeslot you have been assigned to based on your preferences.
+
+To learn more about our team, visit http://www.hyperxite.com/.
+If you have additional questions, please contact us at ucihyperxite@gmail.com.
+"
+                            />
+                        </Reveal>
+
+
+                    </div>
+                </Section>
+
+                {/* Resources Section*/}
+                <Section className="bg-[#f1f0ea] pt-0">
+                    <Reveal>
+                        <div className="flex flex-col space-y-2">
+                            <h1 className="font-helevtica font-normal text-4xl md:text-5xl font-bold mb-6">Resources</h1>
+                        </div>
+                    </Reveal>
+                    <div className="mt-auto pt-4 border-t-[0.5px] border-zinc-700 mb-8"></div>
+                    
+                    <div className="flex flex-col space-y-5">
+
+                        <Reveal width="100%">
+                            <LinkCard 
+                                title="Welcome to UCI!" 
+                                href=" https://docs.google.com/document/d/1eshmf91atoLJUE7oEpndED69H0qf6El7RRJexYysXdM/edit?usp=sharing" 
+                                description="A complete guide for incoming UCI students with housing tips, class planning resources, and everything you need to transition smoothly into college!"
                             />
                         </Reveal>
 
@@ -80,7 +104,7 @@ function Links(){
                                 description="View all upcoming ASME events and important dates."
                             />
                         </Reveal>
-                               <Reveal width="100%">
+                        <Reveal width="100%">
                             <LinkCard 
                                 title="Wins of the Week!" 
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSdINpl2NY8RXrpXWf0T7AkO83vXS1_Nx7UfzpSPLHWkR6Gosw/viewform" 

@@ -1,5 +1,4 @@
 
-
 interface Member {
   name: string;
   role: string;
@@ -12,6 +11,26 @@ interface BoardCommittee {
   members: Member[];
 }
 
+const portraitModules = import.meta.glob(
+  "../assets/board-photos/25-26_Portraits/*.{jpg,jpeg,png,JPG,JPEG,PNG}",
+  { eager: true, import: "default" }
+) as Record<string, string>;
+
+const normalizeMemberKey = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, "");
+
+const portraitsByName = Object.entries(portraitModules).reduce<Record<string, string>>((acc, [path, imageUrl]) => {
+  const filename = path.split("/").pop() ?? "";
+  const basename = filename.replace(/\.[^.]+$/, "");
+  acc[normalizeMemberKey(basename)] = imageUrl;
+  return acc;
+}, {});
+
+const resolvePortrait = (memberName: string, fallbackImage: string) => {
+  const normalizedName = normalizeMemberKey(memberName);
+  return portraitsByName[normalizedName] ?? fallbackImage;
+};
+
+// 2025-2026
 
 const boardCommitte: BoardCommittee[] = [
   {
@@ -80,11 +99,19 @@ const boardCommitte: BoardCommittee[] = [
   {
     title: "Peterworks",
     members: [
-      { name: "Yuvarj Chera", role: "Peterworks Director", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720490616014?e=1773273600&v=beta&t=jBcA50gdLX80hYrEwIztjr3zuf50Cl-A_iiKG3xO4-g", linkedin : "https://www.linkedin.com/in/yuvraj-chera-99526a298/" },
+      { name: "Yuvraj Chera", role: "Peterworks Director", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720490616014?e=1773273600&v=beta&t=jBcA50gdLX80hYrEwIztjr3zuf50Cl-A_iiKG3xO4-g", linkedin : "https://www.linkedin.com/in/yuvraj-chera-99526a298/" },
       { name: "Sarah McClelland", role: "Peterworks TA", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720490616014?e=1773273600&v=beta&t=jBcA50gdLX80hYrEwIztjr3zuf50Cl-A_iiKG3xO4-g", linkedin : "https://www.linkedin.com/in/sarahrmcclelland/" },
       { name: "Storme Higgins", role: "Peterworks TA", image: "https://media.licdn.com/dms/image/v2/D5603AQHbvfaCnSEdrg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1720490616014?e=1773273600&v=beta&t=jBcA50gdLX80hYrEwIztjr3zuf50Cl-A_iiKG3xO4-g", linkedin : "https://www.linkedin.com/in/storme-higgins/" },
     ],
   },
 ];
 
-export default boardCommitte
+const boardCommitteeWithPortraits: BoardCommittee[] = boardCommitte.map((committee) => ({
+  ...committee,
+  members: committee.members.map((member) => ({
+    ...member,
+    image: resolvePortrait(member.name, member.image),
+  })),
+}));
+
+export default boardCommitteeWithPortraits;

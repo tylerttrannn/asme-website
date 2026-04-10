@@ -38,7 +38,7 @@ const eventsData: EventItem[] = [
   {
     title: "Network with ASME",
     date: "",
-    description: "Banquet-style dinner networking event where company representatives invited to talk to students and give them insights on their journey, life at X company, etc! Attendees included Northrop Grumman, ANSYS, Parker Aerospace, Johnson and Johnson, etc",
+    description: "Banquet-style dinner networking event where company representatives are invited to talk to students and give them insights on their journey, life at X company, etc! Attendees included Northrop Grumman, ANSYS, Parker Aerospace, Johnson and Johnson, etc",
     image: network,
     tag: "Event"
   },
@@ -55,7 +55,7 @@ const projectsData: EventItem[] = [
   {
     title: "Peterworks",
     date: "Jan 21 • 5 - 8 PM",
-    description: "PeterWorks is an application based SolidWorks and CAD development program designed to introduce students to 3D modeling and engineering design. Spanning Winter and Spring quarters, participants first learn core CAD skills such as part modeling, assemblies, simulations, and technical drawings, then apply those skills through hands-on fabrication by building a drone in teams. Open to all majors, the program emphasizes practical learning, collaboration, and industry-relevant skills, and was recognized with the “Best Program” award by UCI’s Engineering Student Council for two consecutive years.",
+    description: "PeterWorks is an application based SolidWorks and CAD development program designed to introduce students to 3D modeling and engineering design. Spanning Winter and Spring quarters, participants first learn core CAD skills such as part modeling, assemblies, simulations, and technical drawings, then apply those skills through hands on fabrication by building a drone in teams. Open to all majors, the program emphasizes practical learning, collaboration, and industry relevant skills, and was recognized with the “Best Program” award by UCI’s Engineering Student Council for two consecutive years.",
     image: peterworks,
     tag: "Event"
   },

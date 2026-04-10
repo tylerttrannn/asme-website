@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import FrontPage from './FrontPage'; 
 import Links from './pages/Links';
 import asmegif from '@/assets/site/loading.gif';
+import Board from './pages/Board';
 
 const DefaultPage = () => (
   <div className="h-screen flex flex-col items-center justify-center font-helvetica">
@@ -106,7 +107,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<FrontPage />} />
             <Route path="/links" element={<Links />} />
-            <Route path="/board" element={<DefaultPage />} />
+            <Route path="/board" element={<Board/> } />
             <Route path="/events" element={<DefaultPage />} />
             <Route path="/yearbook" element={<DefaultPage />} />
             <Route path="/peterworks" element={<DefaultPage />} />
