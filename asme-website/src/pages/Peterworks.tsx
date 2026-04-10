@@ -61,9 +61,14 @@ function Peterworks() {
               ))}
             </div>
 
-            <div className="aspect-video w-full">
+            <a
+              href="https://www.youtube.com/watch?v=OiqO-Q6URTA"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="aspect-video w-full overflow-hidden rounded-lg"
+            >
               <iframe
-                className="h-full w-full"
+                className="pointer-events-none h-full w-full"
                 src="https://www.youtube.com/embed/OiqO-Q6URTA?si=MGsnomD-Pi9cKGBI"
                 title="YouTube video player"
                 frameBorder="0"
@@ -71,7 +76,7 @@ function Peterworks() {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               />
-            </div>
+            </a>
           </div>
         </Section>
       </div>

@@ -11,11 +11,8 @@ const postLinks = [
   "https://www.instagram.com/p/DWxs7edCk2u/",
 ];
 
-const EMBED_VISIBLE_HEIGHT = 540;
 const EMBED_TOP_CROP = 58;
-const EMBED_BOTTOM_CROP = 76;
-const EMBED_TOTAL_HEIGHT =
-  EMBED_VISIBLE_HEIGHT + EMBED_TOP_CROP + EMBED_BOTTOM_CROP;
+const EMBED_BOTTOM_CROP = 170;
 
 function toEmbedUrl(postUrl: string) {
   return `${postUrl.replace(/\/$/, "")}/embed`;
@@ -32,23 +29,25 @@ function Events() {
           <div className="grid gap-8 bg-[#f1f0ea] sm:grid-cols-2 lg:grid-cols-3">
             {postLinks.map((postLink) => (
               <Reveal key={postLink} width="100%">
-                <div
-                  className="relative mx-auto w-full overflow-hidden rounded-xl border border-zinc-200 bg-white"
-                  style={{ height: EMBED_VISIBLE_HEIGHT }}
+                <a
+                  href={postLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative mx-auto block aspect-[4/5] w-full overflow-hidden rounded-xl border border-zinc-200 bg-white"
                 >
                   <iframe
                     src={toEmbedUrl(postLink)}
-                    className="absolute left-0 w-full"
+                    className="pointer-events-none absolute left-0 w-full"
                     style={{
                       top: -EMBED_TOP_CROP,
-                      height: EMBED_TOTAL_HEIGHT,
+                      height: `calc(100% + ${EMBED_TOP_CROP + EMBED_BOTTOM_CROP}px)`,
                     }}
                     loading="lazy"
                     scrolling="no"
                     allow="encrypted-media"
                     title={`Instagram post ${postLink}`}
                   />
-                </div>
+                </a>
               </Reveal>
             ))}
           </div>
